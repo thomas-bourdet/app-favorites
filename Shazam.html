@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shazam - Présentation</title>
+    <link rel="stylesheet" href="shazam.css">
+</head>
+<body>
+
+    
+    <header>
+        <h1>shazam</h1>
+        <h3>mettre un nom sur le son</h3>
+    </header>
+
+    <body>
+        <input id="checkbox" type="checkbox">
+        <label class="toggle" for="checkbox">
+            <div id="bar1" class="bars"></div>
+            <div id="bar2" class="bars"></div>
+            <div id="bar3" class="bars"></div>
+        </label>
+    
+        <nav class="side-menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shotgun.html">Shotgun</a></li>
+                <li><a href="shazam.html">Shazam</a></li>
+                <li><a href="poweramp.html">Poweramp</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu"></div>
+
+    <div class="main-content">
+        <div class="feature-box">
+            <div class="description">
+                <h2>Rangez et Organisez</h2>
+                <p>Afin de ne pas perdre cette musique dont vous venez de trouver le titre, Shazam possède une librairie qui gardera pour vous tout les titres que l'application a trouver pour vous, dans l'ordre dans lesquelle vous les avez chercher.</p>
+            </div>
+            <div class="screenshot">
+                <img src="Pics/Library-Sazam.jpg" alt="" class="thumbnail">
+                <video class="video" src="Vids/Library-Shazam.mp4"></video>
+                <div class="play-button">Play</div>
+            </div>
+        </div>
+
+		<div class="feature-box">
+            <div class="description">
+                <h2>Écoutez et Retrouvez</h2>
+                <p>Au simple appuie du bouton central de la page d'accueil de l'application, faites écouter a votre appareil la musique que vous entendez, et laissez Shazam faire le reste, l'application trouveras pour vous, titre, artiste ainsi que bien d'autres information à propos de la musique qu'elle reconnaît.</p>
+            </div>
+            <div class="screenshot">
+                <img src="Pics/Main-Shazam.jpg" alt="" class="thumbnail">
+                <video class="video" src="Vids/Main-Shazam.mp4"></video>
+                <div class="play-button">Play</div>
+
+            </div>
+        </div>
+
+		<div class="feature-box">
+            <div class="description">
+                <h2>Observez et Découvrez</h2>
+                <p>Shazam propose aussi la possibilité de découvrir les tendance du monde, que ce soit les morceaux les plus 'Shazamer' ou les plus écouter, dans le pays de votre choix, et les catégories que vous aimez.</p>
+            </div>
+            <div class="screenshot">
+                <img src="Pics/Charts-Sazam.jpg" alt="" class="thumbnail">
+                <video class="video" src="Vids/Charts-Shazam.mp4"></video>
+                <div class="play-button">Play</div>
+
+            </div>
+        </div>
+
+    </div>
+
+<!-- Script Java Simple afin de permettre au bouton Play de Fonctionner -->
+    <script>
+        const playButtons = document.querySelectorAll('.play-button');
+        
+        playButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const video = this.parentNode.querySelector('.video');
+                video.play();
+                this.style.display = 'none';
+            });
+        });
+    </script>
+<!---->
+
+<footer>
+    <div class="social-media">
+        <a href="https://www.facebook.com/Shazam" target="_blank" class="social-link">Facebook</a>
+        <a href="https://twitter.com/Shazam" target="_blank" class="social-link">Twitter</a>
+        <a href="https://www.instagram.com/shazam/" target="_blank" class="social-link">Instagram</a>
+    </div>
+</footer>
+    
+</body>
+</html>
